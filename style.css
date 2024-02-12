@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Zapobiega przewijaniu strony */
+    background-color: #ffa6c9; /* Różowe tło */
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transform: rotate(-45deg);
+    background-color: red;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.heart:before {
+    top: -10px;
+    left: 0;
+}
+
+.heart:after {
+    top: 0;
+    left: 10px;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Istniejące style */
+
+.pytanie {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1000; /* Upewnij się, że pytanie jest na wierzchu */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.pytanie p {
+    margin: 0 0 20px 0;
+    font-size: 20px;
+}
+
+#btnTak, #btnNie {
+    margin: 0 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+/* Istniejące style */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffa6c9; /* Różowe tło */
+}
+
+.container {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1; 
+}
+
+
+/* Zaktualizowany styl dla pytania */
+.pytanie {
+    position: relative;
+    z-index: 2; /* Pytanie na wierzchu */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.pytanie p {
+    margin: 0 0 20px 0;
+    font-size: 20px;
+}
+
+#btnTak, #btnNie {
+    margin: 0 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
